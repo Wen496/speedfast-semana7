@@ -52,7 +52,7 @@ public class VentanaRegistroPedido extends JFrame {
         Pedido pedido = new Pedido(direccion, tipo);
 
         if (pedidoDAO.guardar(pedido)) {
-            JOptionPane.showMessageDialog(this, "Pedido registrado correctamente con ID " + pedido.getId() + ".", "Confirmacion", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Pedido registrado correctamente.", "Confirmacion", JOptionPane.INFORMATION_MESSAGE);
             campoDireccion.setText("");
             comboTipo.setSelectedIndex(0);
         } else {

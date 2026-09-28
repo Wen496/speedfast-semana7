@@ -28,7 +28,13 @@ public class Main {
                     "No se pudo conectar a la base de datos:\n" + e.getMessage(),
                     "Error de conexion", JOptionPane.ERROR_MESSAGE);
         } finally {
-            ConexionBD.cerrar(con, null, null);
+            try {
+                if (con != null) {
+                    con.close();
+                }
+            } catch (SQLException e) {
+                System.err.println("Error al cerrar la conexion: " + e.getMessage());
+            }
         }
     }
 }

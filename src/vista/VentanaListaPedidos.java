@@ -22,7 +22,7 @@ public class VentanaListaPedidos extends JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        String[] columnas = {"ID", "Direccion", "Tipo", "Estado", "Repartidor"};
+        String[] columnas = {"ID", "Direccion", "Tipo", "Estado"};
         modeloTabla = new DefaultTableModel(columnas, 0) {
             @Override
             public boolean isCellEditable(int fila, int columna) {
@@ -55,8 +55,7 @@ public class VentanaListaPedidos extends JFrame {
                     p.getId(),
                     p.getDireccion(),
                     p.getTipo(),
-                    p.getEstado(),
-                    p.getRepartidorAsignado()
+                    p.getEstado()
             });
         }
     }

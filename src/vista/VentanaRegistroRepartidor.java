@@ -46,7 +46,7 @@ public class VentanaRegistroRepartidor extends JFrame {
         Repartidor repartidor = new Repartidor(nombre);
 
         if (repartidorDAO.guardar(repartidor)) {
-            JOptionPane.showMessageDialog(this, "Repartidor registrado correctamente con ID " + repartidor.getId() + ".", "Confirmacion", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Repartidor registrado correctamente.", "Confirmacion", JOptionPane.INFORMATION_MESSAGE);
             campoNombre.setText("");
         } else {
             JOptionPane.showMessageDialog(this, "No se pudo guardar el repartidor en la base de datos.", "Error", JOptionPane.ERROR_MESSAGE);
